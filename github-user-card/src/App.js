@@ -66,21 +66,27 @@ class App extends React.Component {
           <select onChange={this.handleChanges}>
             <option value="ajkemps">Alex Kemper</option>
             <option value="JuniorDugue">Junior Dugue</option>
+            <option value="dhoesle">Danny Hoesle</option>
+            <option value="sigij5">Sigi Jaeckel</option>
+            <option value="MaryamMosstoufi">Maryam Mosstoufi</option>
+            <option value="Impulse2020">Jeff Gallion</option>
+            <option value="natethegreat5413">Nate Cowley</option>
+            <option value="jcrobles1989">Jose Robles</option>
+            <option value="JDMTias">Matias Iturbide</option>
           </select>
           <button onClick={this.fetchUser}>Get User Info</button>
         </form>
 
         <div className="usercard">
           <img src={this.state.image} />
-          <h4>Name: {this.state.name}</h4>
-          <h5>Username: {this.state.username}</h5>
-          <p>Bio: {this.state.bio}</p>
-          <ol>
-            Followers:{" "}
+          <h4>Name</h4> <p>{this.state.name}</p> <h4>Username </h4>{" "}
+          <p>{this.state.username}</p> <h4>Bio</h4> <p>{this.state.bio}</p>
+          <div>
+            <h4>Followers: </h4>
             {this.state.followers.map((follower) => {
-              return <li>{follower}</li>;
+              return <p>{follower}</p>;
             })}
-          </ol>
+          </div>
         </div>
       </div>
     );
